@@ -394,6 +394,16 @@ public class CalculadoraEstadisticas
 		return cantidadMedallistas / cantidadAtletas;
 	}
 
+	public String buscarAtletaPais(String nombreAtleta){
+		Atleta atleta = null;
+		for (int i=0;i<atletas.size()&&atleta==null;i++) {
+			if (atletas.get(i).darNombre().equals(nombreAtleta)){
+				atleta = atletas.get(i);
+			}
+		}
+		assert atleta != null;
+		return atleta.darPais().darNombre();
+	}
 	/**
 	 * Retorna el país con el nombre indicado
 	 * 

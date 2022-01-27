@@ -104,8 +104,8 @@ public class ConsolaOlimpicos
 		System.out.println("10. Consultar el atleta todoterreno");
 		System.out.println("11. Consultar los medallistas por país y género");
 		System.out.println("12. Consultar el porcentaje de atletas que son medallistas");
-		System.out.println("14. Buscar el país que representa un atleta.");
-		System.out.println("13. Salir de la aplicación\n");
+		System.out.println("13. Buscar el país que representa un atleta.");
+		System.out.println("14. Salir de la aplicación\n");
 	}
 
 	/**
@@ -364,6 +364,16 @@ public class ConsolaOlimpicos
 		{
 			System.out.println(deporte + ": " + atletas.get(deporte).size() + " atletas");
 		}
+	}
+
+	private void ejecutarBuscarPais(){
+		System.out.println("\nPaís que representa un atleta\n");
+
+		String nombre = input("Ingrese el nombre del atleta de su interés: ");
+		String pais = calculadora.buscarAtletaPais(nombre);
+
+		System.out.println("El país al que representa el atleta "+nombre+" es "+pais);
+
 	}
 
 	/**
