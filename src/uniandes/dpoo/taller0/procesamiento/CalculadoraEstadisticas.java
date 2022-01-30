@@ -395,13 +395,7 @@ public class CalculadoraEstadisticas
 	}
 
 	public String buscarAtletaPais(String nombreAtleta){
-		Atleta atleta = null;
-		for (int i=0;i<atletas.size()&&atleta==null;i++) {
-			if (atletas.get(i).darNombre().equals(nombreAtleta)){
-				atleta = atletas.get(i);
-			}
-		}
-		assert atleta != null;
+		Atleta atleta = buscarAtleta(nombreAtleta);
 		return atleta.darPais().darNombre();
 	}
 	/**
